@@ -33,7 +33,7 @@ jobs:
       - name: run mysql on docker
         run: sudo docker run --name=mysql  -p3306:3306 -e MYSQL_ROOT_PASSWORD=password --restart on-failure -d mysql/mysql-server:5.7
       - name: Executar comandos no contêiner MySQL
-        run: sudo docker exec -it mysql mysql -u root -p password -e  "CREATE USER 'root'@'%' IDENTIFIED BY 'password'; \
+        run: sudo docker exec mysql mysql -u root -p password -e  "CREATE USER 'root'@'%' IDENTIFIED BY 'password'; \
             GRANT ALL PRIVILEGES ON *.* TO 'root'@'%'; \
             CREATE DATABASE datalogger;\
             FLUSH PRIVILEGES;"
