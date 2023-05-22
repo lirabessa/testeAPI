@@ -39,6 +39,9 @@ jobs:
 
       - name: install node
         run: npm install
+
+      - name: Rodando projeto
+        run: npm run dev  
       
       - name: Executar pytest
         run: pytest
