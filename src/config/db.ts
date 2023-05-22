@@ -16,7 +16,7 @@ const db = new DataSource({
     host: HOST,
     port: 3306,
     username: 'root',
-    password:PASSWORD,
+    password: "password",
     synchronize: true, 
     logging: false,
     entities: [Estacao, Parametro, EstacaoHasParametros, Alerta, Usuario, Medida, RegistroAlerta],
