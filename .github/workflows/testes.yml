@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main 
+      
 jobs:
   testes:
     runs-on: ubuntu-latest
@@ -33,9 +34,10 @@ jobs:
         run: sudo docker run --name=mysql  -p3306:3306 -e MYSQL_ROOT_PASSWORD=password --restart on-failure -d mysql/mysql-server:5.7
       - name: list containers
         run: sudo docker container ls
-      - name: conatiner started
+      - name: container started
         run: sudo docker ps
-      -name: install node
+
+      - name: install node
         run: npm install
       
       - name: Executar pytest
