@@ -11,7 +11,7 @@ const HOST = process.env.HOST || "localhost";
 const DB_PORT = process.env.DB_PORT || 3306;
 
 const db = new DataSource({
-    database: DATABASE,
+    database: "datalogger",
     type: "mysql",
     host: HOST,
     port: 3306,
