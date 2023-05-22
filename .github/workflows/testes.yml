@@ -35,6 +35,8 @@ jobs:
         run: sudo docker container ls
       - name: conatiner started
         run: sudo docker ps
+      -name: install node
+        run: npm install
       
       - name: Executar pytest
         run: pytest
