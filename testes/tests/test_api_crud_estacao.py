@@ -40,7 +40,6 @@ class TestApiCrudEstacao:
         response = requests.post(URL_BASE + "/cadastrar", data=data)
         assert response.status_code == 500
 
-
     def test_buscar_todas_estacoes(self):
         response = requests.get(URL_BASE + "/buscar")
         assert response.status_code == 200
