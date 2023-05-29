@@ -55,7 +55,6 @@ class TestApiCrudEstacao:
         response = requests.get(URL_BASE + "/busca/Teste_Estação_API")
         assert response.status_code == 200
 
-
     def test_buscar_estacao_inexistente(self):
         response = requests.get(URL_BASE + "/buscar/9999")
         assert response.status_code == 404
