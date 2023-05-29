@@ -11,12 +11,12 @@ const HOST = process.env.HOST || "localhost";
 const DB_PORT = process.env.DB_PORT || 3306;
 
 const db = new DataSource({
-    database: DATABASE,
+    database: "datalogger",
     type: "mysql",
     host: HOST,
     port: 3306,
     username: 'root',
-    password:PASSWORD,
+    password: "password",
     synchronize: true, 
     logging: false,
     entities: [Estacao, Parametro, EstacaoHasParametros, Alerta, Usuario, Medida, RegistroAlerta],
