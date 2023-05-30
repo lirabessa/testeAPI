@@ -3,7 +3,7 @@ name: Testes automatizados
 on:
   push:
     branches:
-      - main
+      - [main, dev]
 
 jobs:
   testes:
